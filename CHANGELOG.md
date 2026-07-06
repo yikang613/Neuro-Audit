@@ -13,6 +13,17 @@ All notable changes to neuroscribe are documented here. The format follows
   story and positioning, `CONTRIBUTING`, `requirements.txt` (graceful-degrade
   deps), `.gitignore` enforcing the content boundary, and a wired
   `eval-gate` CI workflow with minimal green helper scripts.
+- **Phase 1 — neuro-write + neuro-review.** The writing core, ported from the
+  MIA writing skill and generalized to Layer A (journal-agnostic): a `_shared/`
+  neuroimaging layer (invariants, modality taxonomy, terminology ledger, the
+  HARD discipline style tier); `neuro-write` and `neuro-review` as router skills
+  (short `SKILL.md` + `manifest.yaml`, explicit-invocation-only so they don't
+  collide with an existing manuscript skill); six agent personas (`writer` +
+  four reviewers + desk-reject `editor`); the `journal` axis shipping `generic`
+  and a provenance-stamped `mia` worked example; the runtime venue/project
+  overlay convention; `/neuro-write` and `/neuro-review` commands; and three
+  evals wired into the gate (a MIA-style parity draft + anti-pattern and
+  biological-overclaim detection). No TissueFormer/Layer-C content ships.
 
 ### Planned
 - **v1.0** — `neuro-write` + `neuro-review` (ported from the MIA writing skill)

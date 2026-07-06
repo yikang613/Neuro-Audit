@@ -1,0 +1,20 @@
+name: neuro-review
+version: 0.1.0
+
+# Read on every neuro-review invocation.
+always_load:
+  - ../_shared/core/neuro-invariants.md
+  - ../_shared/core/style-discipline-tier.md
+  - ../_shared/core/terminology-ledger.md
+  - static/core/workflow.md
+  - static/core/panel-weights.md
+
+# No file-backed axis. The section(s) under review are a detection hint the
+# router resolves against panel-weights.md to decide which reviewers fire.
+
+references:
+  on_demand:
+    - condition: need the detailed per-reviewer rubrics or the critique output format
+      path: references/reviewer-rubrics.md
+    - condition: running the editor desk-reject screen before peer review
+      path: static/core/desk-reject-screen.md

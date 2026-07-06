@@ -1,0 +1,19 @@
+{
+  "skill": "neuro-write",
+  "notes": "Phase-1 parity gate. These encode the invariants neuro-write(journal=mia) must satisfy on every run (N=3). Deterministic checks are listed per eval; a later run_evals upgrade will execute them.",
+  "evals": [
+    {
+      "id": "nw-1",
+      "name": "draft-methods-section-mia-style",
+      "prompt": "Draft a Methods 'Experimental Setup' subsection for a generic brain-network deep-learning classification study, targeting journal = MIA. The study benchmarks a proposed model against several baselines on a resting-state fMRI connectome dataset, using AUC as the primary metric with 10-seed x 5-fold cross-validation and BH-FDR correction. Target ~600-900 words. Any statistic you were not given must be a placeholder.",
+      "expected_output": "MIA-style academic prose in first-person plural. Author-year citations. 'Fig. N' / 'Fig. NA' figure form. No anti-patterns. Statistics the writer was not given appear as [STAT: ...] placeholders, never invented.",
+      "checks": [
+        "no anti-patterns (parenthetical numeric breakdown, inline pseudocode, magic-number enumeration, colloquialism, bullet abuse)",
+        "citation form equals the declared venue value (MIA = author-year)",
+        "figure references use 'Fig. N' / 'Fig. NA'",
+        "first-person plural voice",
+        "no invented statistics; unverified numbers are [STAT:]/[CITE:] placeholders"
+      ]
+    }
+  ]
+}
