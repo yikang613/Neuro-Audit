@@ -1,6 +1,6 @@
 {
   "skill": "neuro-review",
-  "notes": "Phase-1 detection gate. Ported and genericized from the mia critique/overclaim evals. Each eval lists the deterministic flags the panel must raise.",
+  "notes": "Phase-1 detection gate. Journal-agnostic. Each eval lists the deterministic flags the panel must raise.",
   "evals": [
     {
       "id": "nr-1",

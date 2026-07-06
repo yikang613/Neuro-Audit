@@ -14,16 +14,18 @@ always_load:
 
 # The ONLY file-backed axis. The journal selects a prose fragment; the venue's
 # actual *rules* are a runtime YAML overlay resolved by the router (SKILL.md
-# Step 3.5), NOT a fragment. Only 'generic' and 'mia' ship as prose.
+# Step 3.5), NOT a fragment. No real journal ships in-tree: only the journal-
+# agnostic 'generic' default and the synthetic 'example' test fixture.
 axes:
   journal:
     detect: >
-      the journal the user names. If a runtime venue profile exists for it, load
-      'generic' prose and apply that profile as the overlay. If it is MIA, load
-      'mia'. Otherwise 'generic'.
+      the journal the user names. Load 'generic' prose and apply that venue's
+      runtime profile (if one exists) as the highest-priority overlay. 'example'
+      is a fictional fixture for testing/demonstration only. To target a real
+      journal, its rules come from the runtime venue profile, never a fragment.
     values:
       generic: static/fragments/journal/generic.md
-      mia: static/fragments/journal/mia.md
+      example: static/fragments/journal/example.md
     default: generic
     multi: false
 

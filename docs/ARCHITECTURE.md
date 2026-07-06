@@ -16,7 +16,8 @@ ships as code:
   `skills/*/static/core/` and `agents/`.
 - **Layer B — Journal profile (runtime data).** Word limits, citation style,
   required sections, exemplar patterns. Supplied per-journal at runtime as
-  validated YAML; only MIA ships as a worked example.
+  validated YAML. No real journal ships in-tree — only a synthetic `example`
+  fixture, alongside the journal-agnostic `generic` default.
 - **Layer C — Project profile (runtime data).** Terminology/notation glossaries,
   the figure plan, repo paths. Supplied per-manuscript, always private.
 
@@ -34,9 +35,10 @@ manifest, resolves and loads Layer B/C data:
    `.neuroscribe/project/<name>/project.yaml` and apply them as the
    **highest-priority data overlay**.
 
-The `journal` axis therefore ships **only** two prose fragments — `generic` and
-`mia`. A real venue routes to `generic` prose plus its runtime YAML overlay. The
-manifest is not a venue registry.
+The `journal` axis therefore ships **only** the journal-agnostic `generic`
+default plus a synthetic `example` fixture — no real journal. A real venue routes
+to `generic` prose plus its runtime YAML overlay. The manifest is not a venue
+registry.
 
 ## Invariants
 

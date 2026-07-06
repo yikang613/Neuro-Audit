@@ -4,7 +4,7 @@ The journal-agnostic fallback. A real venue routes to this fragment plus its own
 runtime overlay (`.neuroscribe/journal/<slug>/{venue,format,style}.yaml`), which
 supplies the hard numbers. This file gives sensible defaults and, more
 importantly, tells the writer where a value must come from the profile rather
-than a guess. `journal/mia.md` is the worked example of a fully-specified venue.
+than a guess. `journal/example.md` is the worked example of a fully-specified venue.
 
 ## Declared, never inferred
 
@@ -65,5 +65,5 @@ variant is a project decision; if unstated, pick one and apply it throughout.
 For any of: abstract length, section numbering, citation rendering,
 figure-reference rendering, required highlights/graphical-abstract, table style,
 keyword rules, CRediT, AI-disclosure placement, and submission formats — the
-authoritative source is the venue overlay. See `journal/mia.md` for a fully
+authoritative source is the venue overlay. See `journal/example.md` for a fully
 worked instance of every one of these fields.

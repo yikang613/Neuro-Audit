@@ -33,8 +33,8 @@ Expect, and use, the following:
   Methods section for notation and terminology.
 - **The resolved rule set** — paths to (or inline contents of) the core rule
   files (`stance`, `style-rules`, `methods-structure`, `figure-discipline`) and
-  the resolved **venue fragment** (`journal/generic.md` plus, e.g.,
-  `journal/mia.md`) together with any runtime venue overlay. Read these before
+  the resolved **venue fragment** (`journal/generic.md`, or the synthetic
+  `journal/example.md`) together with any runtime venue overlay. Read these before
   drafting; the venue profile's declared constraints (abstract length, section
   numbering, citation form, figure-reference form, language variant) are hard
   and override the generic defaults.

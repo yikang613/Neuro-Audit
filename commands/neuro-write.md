@@ -1,6 +1,6 @@
 ---
 description: Draft or revise a neuroimaging manuscript section with neuroscribe (writer + reviewer-panel loop).
-argument-hint: [section + journal, e.g. "Methods for MIA" or "Discussion, NeuroImage"]
+argument-hint: [section + target journal, e.g. "Methods for <your journal>" or "Discussion"]
 ---
 
 Use the **neuro-write** skill to draft or revise the requested manuscript section.

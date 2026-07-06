@@ -31,11 +31,13 @@ From the user's request determine:
 - **paper_type** — algorithmic / clinical / methods.
 
 **Echo the detected values back in one line** so the user can cheaply correct
-them before drafting (e.g. "Writing: Methods + Results, journal = MIA,
-paper_type = algorithmic — correct?").
+them before drafting (e.g. "Writing: Methods + Results for <the venue you
+named>, paper_type = algorithmic — correct?").
 
 ## Step 3 — Load only the mapped journal fragment
-`Read` the fragment for the detected `journal` value (`generic` or `mia`). Do
+`Read` the fragment for the detected `journal` value (`generic`, or the
+synthetic `example` fixture). No real journal ships as a fragment — a real
+venue uses `generic` prose plus its runtime profile overlay (Step 3.5). Do
 **not** read every fragment.
 
 ## Step 3.5 — Overlay the runtime profiles (the venue's real rules)
@@ -52,8 +54,9 @@ user data outside this plugin. Resolve the overlay:
    venue profile overrides the shipped fragment; an unstated rule is
    **NOT-CHECKED**, never a guessed default.
 
-If no profile exists yet, proceed with `generic` + the shipped `mia` fragment
-and tell the user which rules are running as NOT-CHECKED.
+If no venue profile exists yet, proceed with the `generic` fragment and tell
+the user which rules are running as NOT-CHECKED (they can create a profile via
+`/neuro-venue`).
 
 ## Step 4 — Apply in priority order
 Resolve style by: **discipline tier (HARD) > declared journal profile (STRONG) >

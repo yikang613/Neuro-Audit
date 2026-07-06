@@ -7,7 +7,7 @@ coherent and safe.
 ## Ground rules (the invariants)
 
 1. **Never commit private content.** No exemplar PDFs, no real journal profiles
-   beyond the allowlisted MIA reference, no project/manuscript content. The
+   (only synthetic `*.example.yaml` fixtures), no project/manuscript content. The
    `.gitignore` and `scripts/lint_no_journal_content.py` enforce this; CI fails
    if you cross the line.
 2. **Grounded numbers only.** Any statistic surfaced to the user must come from
@@ -37,5 +37,5 @@ coherent and safe.
 ## Adding a journal
 
 You don't edit the plugin to support a new journal — you create a runtime
-profile in your own `.neuroscribe/` overlay via `neuro-venue`. Only the MIA
-reference profile ships in-tree, as a worked example.
+profile in your own `.neuroscribe/` overlay via `neuro-venue`. No real journal
+ships in-tree; only a synthetic `example` fixture, for tests and demonstration.
