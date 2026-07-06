@@ -1,0 +1,13 @@
+# Runtime dependencies for neuroscribe's helper scripts.
+# All scripts degrade GRACEFULLY when an optional dependency is missing
+# (they emit NOT-VALIDATED / NOT-CHECKED instead of crashing), so a user
+# without these installed still gets a usable, honest result.
+
+pyyaml>=6.0          # parse the declared venue/format/style/project profiles
+jsonschema>=4.17     # validate profiles against the shipped schemas (optional at runtime)
+
+# --- Phase 2: the neuro-stats MCP server (uncomment when building) -----------
+# mcp>=1.0           # Model Context Protocol server framework
+# numpy>=1.24
+# scipy>=1.10        # the statistical tests the ledger captures
+# pingouin>=0.5      # effect sizes, DeLong-style comparisons, etc.

@@ -1,0 +1,31 @@
+neuroscribe
+Copyright 2026 Yikang Li
+
+This product is licensed under the Apache License, Version 2.0 (see LICENSE).
+
+------------------------------------------------------------------------
+Scope of this license (public framework / private content)
+------------------------------------------------------------------------
+The Apache-2.0 license covers the neuroscribe FRAMEWORK ONLY: the skills,
+agents, scripts, schemas, the local MCP server, hooks, and documentation
+in this repository, plus the single synthetic example profiles
+(*.example.yaml) and the MIA reference journal profile that is built
+solely from MIA's publicly published Guide for Authors.
+
+The license does NOT extend to, and this repository must never contain:
+  - copyrighted exemplar manuscripts / PDFs (they live only in a user's
+    private, uncommitted `.neuroscribe/journal/<slug>/exemplars/`);
+  - any user's project profile or unpublished manuscript content
+    (private `.neuroscribe/project/<name>/`);
+  - any real journal's profile beyond the allowlisted MIA reference.
+The `scripts/lint_no_journal_content.py` guard and `.gitignore` enforce
+this boundary.
+
+------------------------------------------------------------------------
+Attribution
+------------------------------------------------------------------------
+neuroscribe's design was informed by the structure of two existing
+Claude Code skill packs. Their concepts (schema-validated venue profiles,
+router-based progressive disclosure) were re-implemented independently
+("clean-room") from their public field lists and patterns; no source
+files from those packs are copied into this repository.

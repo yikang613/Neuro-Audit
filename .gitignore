@@ -1,0 +1,23 @@
+# === Public framework / private content boundary =============================
+# NEVER commit a user's runtime overlay: real journal profiles, exemplar PDFs,
+# project profiles, or the captured-stat ledger. This is enforced twice — here
+# and by scripts/lint_no_journal_content.py in CI.
+.neuroscribe/
+**/exemplars/
+run-ledger.jsonl
+*.pdf
+
+# === Python ==================================================================
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+
+# === OS / editor =============================================================
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/

@@ -1,0 +1,23 @@
+{
+  "name": "neuroscribe",
+  "version": "0.0.1",
+  "description": "An AI-agent auditor and journal-grade writer for neuroimaging manuscripts. It grounds every statistic to a captured tool-call, audits data leakage / biological overclaim / reproducibility, and enforces journal rules that are declared, never guessed. Complements pipeline runners (it audits and writes up their results) rather than replacing them.",
+  "author": {
+    "name": "Yikang Li",
+    "email": "liyikang613@gmail.com"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "neuroimaging",
+    "brain-network",
+    "manuscript",
+    "reproducibility",
+    "rigor-audit",
+    "academic-writing",
+    "mcp",
+    "claude-code",
+    "agents"
+  ],
+  "homepage": "https://github.com/CHANGE-ME/neuroscribe",
+  "repository": "https://github.com/CHANGE-ME/neuroscribe"
+}

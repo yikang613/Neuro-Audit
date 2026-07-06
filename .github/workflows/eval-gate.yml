@@ -1,0 +1,38 @@
+name: eval-gate
+
+# "Prompts are software with tests." This gate runs on any change to the
+# agents, skill fragments, evals, scripts, or MCP server, and fails on an
+# unacknowledged eval regression or a private-content leak.
+
+on:
+  pull_request:
+    paths:
+      - "agents/**"
+      - "skills/**/static/**"
+      - "skills/**/evals/**"
+      - "scripts/**"
+      - "mcp/**"
+  push:
+    branches: [main]
+
+jobs:
+  eval-gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Content firewall (no private journal/project content committed)
+        run: python scripts/lint_no_journal_content.py
+
+      - name: Validate shipped profiles against their schemas
+        run: python scripts/validate_profile.py --selftest
+
+      - name: Run evals (fail on unacknowledged regression)
+        run: python scripts/run_evals.py --ci
