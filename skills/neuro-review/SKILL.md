@@ -36,10 +36,13 @@ Resolve `.neuro-audit/` (`$NEURO_AUDIT_HOME` → walk up → halt and ask) and
 an unstated rule is **NOT-CHECKED**, never a guessed default.
 
 ## Step 4 — Spawn the panel in parallel
-In a single message, spawn the selected reviewer subagents (Task tool):
-`reviewer_style`, `reviewer_method`, `reviewer_biology`, `reviewer_coherence`.
-Pass each: the draft, the section context, and the loaded discipline + venue
-rules. Each returns a structured critique with a top-line verdict.
+First `Read` the on-demand `../_shared/core/rigor-pitfall-catalog.md`. In a single
+message, spawn the selected reviewer subagents (Task tool): `reviewer_style`,
+`reviewer_method`, `reviewer_biology`, `reviewer_coherence`. Pass each: the draft,
+the section context, and the loaded discipline + venue rules — and additionally
+pass the **pitfall catalog** to `reviewer_method` (and to `reviewer_biology` for
+the overclaim / reverse-inference pitfalls), instructing them to run the catalog
+pitfall-pass first. Each returns a structured critique with a top-line verdict.
 
 Optionally (pre-submission), also run the **`editor`** desk-reject screen — load
 `static/core/desk-reject-screen.md` and spawn the `editor` agent for a
