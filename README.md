@@ -23,20 +23,6 @@ Medical Image Analysis, Human Brain Mapping, or Nature Neuroscience — because
 they are about the _science_, not the venue. The journal you declare only
 changes the writing/formatting layer.
 
-## Positioning
-
-- **Complements pipeline _runners_** (NeuroClaw, NeuroAgent, NEURA): they
-  _produce_ results; neuro-audit _audits and writes them up_. It is the missing
-  rigor-and-writing layer, **not another runner** — it never touches your raw
-  scans.
-- **Specializes a general pattern; it does not rebuild one.** For general
-  academic drafting, citation formatting, and format conversion, excellent
-  general skills already exist (e.g. `academic-research-skills`, `nature-*`).
-  neuro-audit reuses those patterns and adds the one thing they cannot have:
-  **a neuroimaging rigor layer** (the pitfall catalog, atlas/modality
-  conventions). The overlapping writing surface is deliberately thin; the
-  domain rigor is the point.
-
 > **Honest status (v0.x).** What works today: **`neuro-write`** and
 > **`neuro-review`** (including the rigor pitfall audit, driven by the
 > [pitfall catalog](skills/_shared/core/rigor-pitfall-catalog.md)). Still being
@@ -125,6 +111,16 @@ supply the content at runtime.
 - **v1.1** — `neuro-venue` (runtime journal profiles) + `neuro-preprocess`
   (Methods documentation scaffolds) + the optional de-AI lens.
 - **v1.2** — `neuro-litscan` + public release.
+
+### Future directions
+
+- A **community-contributed pitfall catalog** — new neuroimaging failure modes,
+  each added with a checkable criterion and the evidence a reviewer must quote.
+- Reporting standards beyond COBIDAS (journal- and modality-specific checklists).
+- Deeper citation grounding (CrossRef / PubMed verification, reference-manager export).
+- Broader modality / atlas coverage in the shared domain layer.
+- Behavioral evals for the grounding hook and each reviewer dimension.
+- Optional cross-cohort / external-validation reporting checks.
 
 ## License
 
