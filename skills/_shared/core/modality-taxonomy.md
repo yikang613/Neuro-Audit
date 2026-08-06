@@ -26,14 +26,14 @@ gives the discipline-standard categories those choices instantiate.
 
 ## Connectome construction, briefly
 
-- **Nodes** = atlas parcels (see `atlas-parcellation.md`). The node set and
+- **Nodes** = atlas parcels (Brainnetome, Schaefer, AAL, Desikan-Killiany, …). The node set and
   ordering must be identical across every subject and cohort compared.
 - **Edges** = FC (correlation of fMRI time series) or SC (tractography weight).
 - **Common derived features** = edge weights, node strength/degree, graph-theory
   metrics (compute these with an established library, never re-derive by hand;
   metric definitions differ silently between libraries).
 
-## What is in scope for neuroscribe
+## What is in scope for neuro-audit
 
 Describing, QC-checklisting, documenting, and auditing pipelines that produce the
 above — and writing them up. **Running** the pipelines is out of scope (see

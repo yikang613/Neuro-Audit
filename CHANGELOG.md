@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to neuroscribe are documented here. The format follows
+All notable changes to neuro-audit are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/), and the project aims to follow
 [Semantic Versioning](https://semver.org/).
 
@@ -34,4 +34,4 @@ All notable changes to neuroscribe are documented here. The format follows
 - **v1.1** — `neuro-venue` (runtime journal profiles) + `neuro-preprocess`.
 - **v1.2** — `neuro-litscan` + first public release.
 
-[Unreleased]: https://github.com/CHANGE-ME/neuroscribe/commits/main
+[Unreleased]: https://github.com/yikang613/Neuro-Audit/commits/main

@@ -1,5 +1,5 @@
 name: neuro-review
-version: 0.1.0
+version: 0.0.1
 
 # Read on every neuro-review invocation.
 always_load:
@@ -14,6 +14,8 @@ always_load:
 
 references:
   on_demand:
+    - condition: auditing methodological rigor — apply the neuroimaging pitfall catalog
+      path: ../_shared/core/rigor-pitfall-catalog.md
     - condition: need the detailed per-reviewer rubrics or the critique output format
       path: references/reviewer-rubrics.md
     - condition: running the editor desk-reject screen before peer review

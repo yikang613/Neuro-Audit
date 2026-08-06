@@ -1,7 +1,7 @@
 # Journal profile: generic defaults
 
 The journal-agnostic fallback. A real venue routes to this fragment plus its own
-runtime overlay (`.neuroscribe/journal/<slug>/{venue,format,style}.yaml`), which
+runtime overlay (`.neuro-audit/journal/<slug>/{venue,format,style}.yaml`), which
 supplies the hard numbers. This file gives sensible defaults and, more
 importantly, tells the writer where a value must come from the profile rather
 than a guess. `journal/example.md` is the worked example of a fully-specified venue.

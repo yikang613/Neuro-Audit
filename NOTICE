@@ -1,4 +1,4 @@
-neuroscribe
+neuro-audit
 Copyright 2026 Yikang Li
 
 This product is licensed under the Apache License, Version 2.0 (see LICENSE).
@@ -6,7 +6,7 @@ This product is licensed under the Apache License, Version 2.0 (see LICENSE).
 ------------------------------------------------------------------------
 Scope of this license (public framework / private content)
 ------------------------------------------------------------------------
-The Apache-2.0 license covers the neuroscribe FRAMEWORK ONLY: the skills,
+The Apache-2.0 license covers the neuro-audit FRAMEWORK ONLY: the skills,
 agents, scripts, schemas, the local MCP server, hooks, and documentation
 in this repository, plus the synthetic example profiles (*.example.yaml)
 and the synthetic 'example' journal fixture. No real journal's profile
@@ -14,9 +14,9 @@ ships in-tree; real venues are supplied by the user at runtime.
 
 The license does NOT extend to, and this repository must never contain:
   - copyrighted exemplar manuscripts / PDFs (they live only in a user's
-    private, uncommitted `.neuroscribe/journal/<slug>/exemplars/`);
+    private, uncommitted `.neuro-audit/journal/<slug>/exemplars/`);
   - any user's project profile or unpublished manuscript content
-    (private `.neuroscribe/project/<name>/`);
+    (private `.neuro-audit/project/<name>/`);
   - any real journal's profile (real venues are user-supplied at runtime).
 The `scripts/lint_no_journal_content.py` guard and `.gitignore` enforce
 this boundary.
@@ -24,7 +24,7 @@ this boundary.
 ------------------------------------------------------------------------
 Attribution
 ------------------------------------------------------------------------
-neuroscribe's design was informed by the structure of two existing
+neuro-audit's design was informed by the structure of two existing
 Claude Code skill packs. Their concepts (schema-validated venue profiles,
 router-based progressive disclosure) were re-implemented independently
 ("clean-room") from their public field lists and patterns; no source

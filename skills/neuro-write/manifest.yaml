@@ -1,5 +1,5 @@
 name: neuro-write
-version: 0.1.0
+version: 0.0.1
 
 # Read on every neuro-write invocation: the shared neuroimaging layer plus this
 # stage's journal-agnostic core.

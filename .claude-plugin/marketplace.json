@@ -1,15 +1,15 @@
 {
-  "name": "neuroscribe",
+  "name": "neuro-audit",
   "owner": {
     "name": "Yikang Li",
-    "url": "https://github.com/CHANGE-ME"
+    "url": "https://github.com/yikang613"
   },
-  "description": "neuroscribe — the reproducibility-audit and journal-grade writing layer for neuroimaging manuscripts.",
+  "description": "neuro-audit — the reproducibility-audit and journal-grade writing layer for neuroimaging manuscripts.",
   "plugins": [
     {
-      "name": "neuroscribe",
+      "name": "neuro-audit",
       "source": "./",
-      "description": "Auditor + journal-grade writer for neuroimaging manuscripts: grounds every stat to a captured tool-call, audits leakage / overclaim / reproducibility, and enforces declared-never-guessed journal rules.",
+      "description": "Auditor + journal-grade writer for neuroimaging manuscripts: audits leakage / site-confound / circular-analysis / overclaim with every finding grounded in a quote, never invents statistics or citations, and enforces declared-never-guessed journal rules.",
       "version": "0.0.1",
       "license": "Apache-2.0"
     }

@@ -1,4 +1,4 @@
-# Runtime dependencies for neuroscribe's helper scripts.
+# Runtime dependencies for neuro-audit's helper scripts.
 # All scripts degrade GRACEFULLY when an optional dependency is missing
 # (they emit NOT-VALIDATED / NOT-CHECKED instead of crashing), so a user
 # without these installed still gets a usable, honest result.

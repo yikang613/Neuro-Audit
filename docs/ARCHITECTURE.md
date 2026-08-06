@@ -1,7 +1,7 @@
 # Architecture
 
-neuroscribe is one Claude Code **plugin** containing several stage **sub-skills**,
-a shared domain layer, a local **MCP server**, a **hook**, and helper **scripts**.
+neuro-audit is one Claude Code **plugin** containing several stage **sub-skills**,
+a shared domain layer, helper **scripts**, and a planned grounding spine (a local **MCP server** + a **hook**).
 This document records the invariants that make it safe and reusable — the parts a
 reviewer should read first.
 
@@ -27,12 +27,12 @@ A shipped skill can only `Read` files inside the plugin. It has **no** facility
 to read arbitrary user files by convention. Therefore the **agent**, not the
 manifest, resolves and loads Layer B/C data:
 
-1. **Discovery.** Honor `$NEUROSCRIBE_HOME`; else walk up from the working
-   directory for a `.neuroscribe/` directory (git-style); else **halt and ask**.
+1. **Discovery.** Honor `$NEURO_AUDIT_HOME`; else walk up from the working
+   directory for a `.neuro-audit/` directory (git-style); else **halt and ask**.
    Never guess a path.
 2. **Overlay.** After loading in-plugin fragments, `Read`
-   `.neuroscribe/journal/<slug>/{venue,format,style}.yaml` and
-   `.neuroscribe/project/<name>/project.yaml` and apply them as the
+   `.neuro-audit/journal/<slug>/{venue,format,style}.yaml` and
+   `.neuro-audit/project/<name>/project.yaml` and apply them as the
    **highest-priority data overlay**.
 
 The `journal` axis therefore ships **only** the journal-agnostic `generic`
@@ -42,19 +42,22 @@ registry.
 
 ## Invariants
 
-- **Grounded, not asserted.** `mcp/neuro-stats` computes statistics and appends
-  a record `{value, ci, n, df, seed, input_hash, code_version, timestamp}` to
-  `.neuroscribe/run-ledger.jsonl`. The writer and rigor auditor may cite **only**
-  ledger numbers. `hooks/grounding_guard.py` (a `PreToolUse` hook) blocks any
-  manuscript write containing a number absent from the ledger.
+- **Grounded, not asserted.** Every statistic is either reconciled against a
+  results file the user provides, or held as a `[STAT:]` placeholder — never
+  narrated from memory. _Planned for v1.0:_ a local `mcp/neuro-stats` server that
+  captures `{value, ci, n, df, seed, input_hash, code_version, timestamp}` to
+  `.neuro-audit/run-ledger.jsonl`, and a `hooks/grounding_guard.py` `PreToolUse`
+  hook that blocks any manuscript write containing a number absent from the
+  ledger. Until then the discipline is enforced by the writer and reviewers, not
+  automatically.
 - **Declared, never inferred.** Journal rules carry `declared_by: scholar`;
   `venue_name` is display-only and never used for lookup. Unstated fields report
   `NOT-CHECKED`, never a guessed default.
-- **Generator ≠ evaluator.** The rigor auditor runs in a fresh context (and,
+- **Generator ≠ evaluator.** Reviewer/auditor agents run in a fresh context (and,
   where possible, a different model) from the writer, to avoid frame-lock — a
   known failure mode where a verifier sharing the generator's context rubber-
   stamps its errors.
-- **Auditor, not runner.** neuroscribe never invokes or parses a preprocessing
+- **Auditor, not runner.** neuro-audit never invokes or parses a preprocessing
   pipeline and never reads imaging data. `neuro-preprocess` emits documentation
   scaffolds only.
 - **Public framework, private content.** Enforced by `.gitignore` and

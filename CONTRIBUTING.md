@@ -1,6 +1,6 @@
-# Contributing to neuroscribe
+# Contributing to neuro-audit
 
-Thanks for your interest. neuroscribe is a Claude Code plugin: a set of skills,
+Thanks for your interest. neuro-audit is a Claude Code plugin: a set of skills,
 agents, a local MCP server, hooks, and helper scripts. A few rules keep it
 coherent and safe.
 
@@ -16,7 +16,7 @@ coherent and safe.
 3. **Declared, never inferred.** Journal rules are recorded only from
    user-stated or user-confirmed values (`declared_by: scholar`). Do not add
    code or prompts that guess limits from a journal's name.
-4. **Auditor, not runner.** neuroscribe never invokes or parses the output of a
+4. **Auditor, not runner.** neuro-audit never invokes or parses the output of a
    preprocessing pipeline binary/container and never reads `.nii.gz`/DICOM.
    Preprocessing support is documentation scaffolding only.
 5. **Clean-room reuse.** Adapt concepts from other packs; do not copy files from
@@ -37,5 +37,5 @@ coherent and safe.
 ## Adding a journal
 
 You don't edit the plugin to support a new journal — you create a runtime
-profile in your own `.neuroscribe/` overlay via `neuro-venue`. No real journal
+profile in your own `.neuro-audit/` overlay via `neuro-venue`. No real journal
 ships in-tree; only a synthetic `example` fixture, for tests and demonstration.

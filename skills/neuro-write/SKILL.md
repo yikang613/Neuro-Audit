@@ -4,10 +4,10 @@ description: >-
   Drafts and revises neuroimaging manuscript sections (Methods, Results,
   Discussion, Abstract, Introduction, Conclusion) in a target journal's style,
   grounded in exemplar papers, using a writer + reviewer-panel loop. Part of the
-  neuroscribe plugin. INVOKE EXPLICITLY via the /neuro-write command or when the
-  user names "neuroscribe" / "neuro-write". This skill does NOT auto-trigger on
+  neuro-audit plugin. INVOKE EXPLICITLY via the /neuro-write command or when the
+  user names "neuro-audit" / "neuro-write". This skill does NOT auto-trigger on
   generic "write my section" requests, so that a user's existing manuscript
-  skill remains the default during neuroscribe development.
+  skill remains the default during neuro-audit development.
 ---
 
 # neuro-write — journal-styled neuroimaging manuscript drafting
@@ -43,12 +43,12 @@ venue uses `generic` prose plus its runtime profile overlay (Step 3.5). Do
 ## Step 3.5 — Overlay the runtime profiles (the venue's real rules)
 The shipped journal fragment is prose guidance; the venue's *declared rules* are
 user data outside this plugin. Resolve the overlay:
-1. Honor `$NEUROSCRIBE_HOME`; else walk up from the working directory for a
-   `.neuroscribe/` directory; else **halt and ask** the user where it is (or to
+1. Honor `$NEURO_AUDIT_HOME`; else walk up from the working directory for a
+   `.neuro-audit/` directory; else **halt and ask** the user where it is (or to
    create one via `/neuro-venue`). Never guess a path.
-2. `Read` `.neuroscribe/journal/<slug>/{venue,format,style}.yaml` (venue rules,
+2. `Read` `.neuro-audit/journal/<slug>/{venue,format,style}.yaml` (venue rules,
    layout, and the calibrated style profile) and
-   `.neuroscribe/project/<name>/project.yaml` (terminology, notation, figure
+   `.neuro-audit/project/<name>/project.yaml` (terminology, notation, figure
    plan, placeholder conventions).
 3. Treat these as the **highest-priority data**. On any conflict, the declared
    venue profile overrides the shipped fragment; an unstated rule is

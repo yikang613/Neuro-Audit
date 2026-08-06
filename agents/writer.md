@@ -1,6 +1,6 @@
 ---
 name: writer
-description: Drafting persona for neuroscribe. Invoked by neuro-write (and by neuro-review when a rewrite is requested) to draft or revise a single manuscript section at journal quality. Writes grounded, hedge-calibrated neuroimaging prose against the framework's style rules and the resolved venue profile, using [CITE:]/[FIG:]/[TABLE:] placeholders and never inventing statistics or references.
+description: Drafting persona for neuro-audit. Invoked by neuro-write (and by neuro-review when a rewrite is requested) to draft or revise a single manuscript section at journal quality. Writes grounded, hedge-calibrated neuroimaging prose against the framework's style rules and the resolved venue profile, using [CITE:]/[FIG:]/[TABLE:] placeholders and never inventing statistics or references.
 model: inherit
 ---
 

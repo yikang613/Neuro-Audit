@@ -2,7 +2,7 @@
 # NEVER commit a user's runtime overlay: real journal profiles, exemplar PDFs,
 # project profiles, or the captured-stat ledger. This is enforced twice — here
 # and by scripts/lint_no_journal_content.py in CI.
-.neuroscribe/
+.neuro-audit/
 **/exemplars/
 run-ledger.jsonl
 *.pdf

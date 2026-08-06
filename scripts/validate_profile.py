@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate a neuroscribe profile YAML against its JSON schema.
+"""Validate a neuro-audit profile YAML against its JSON schema.
 
 Usage:
   validate_profile.py --selftest              # validate every shipped *.example.yaml

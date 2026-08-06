@@ -4,9 +4,9 @@ description: >-
   Runs a panel of independent reviewer agents (style, methodology, biological
   claims, coherence) plus an optional desk-reject editor screen over a
   neuroimaging manuscript section or draft, and returns structured critiques.
-  Part of the neuroscribe plugin. INVOKE EXPLICITLY via the /neuro-review command
-  or when the user names "neuroscribe" / "neuro-review". It does NOT auto-trigger
-  on generic "review my draft" requests during neuroscribe development. Usable
+  Part of the neuro-audit plugin. INVOKE EXPLICITLY via the /neuro-review command
+  or when the user names "neuro-audit" / "neuro-review". It does NOT auto-trigger
+  on generic "review my draft" requests during neuro-audit development. Usable
   standalone on an externally-written draft, or as the review step of neuro-write.
 ---
 
@@ -30,7 +30,7 @@ methodology + coherence; Discussion → style + biology + coherence). **Echo the
 selection back** in one line so the user can correct it.
 
 ## Step 3 — Overlay the runtime profiles
-Resolve `.neuroscribe/` (`$NEUROSCRIBE_HOME` → walk up → halt and ask) and
+Resolve `.neuro-audit/` (`$NEURO_AUDIT_HOME` → walk up → halt and ask) and
 `Read` the venue + project profiles. Reviewers check the draft against the
 **declared** venue rules (abstract limit, citation style, required sections);
 an unstated rule is **NOT-CHECKED**, never a guessed default.

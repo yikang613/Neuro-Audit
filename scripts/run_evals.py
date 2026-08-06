@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Discover and check neuroscribe evals.
+"""Discover and check neuro-audit evals.
 
 Each sub-skill ships ``skills/<name>/evals/evals.json``. This runner discovers
 them, verifies they are well-formed, and (in later phases) executes the

@@ -8,7 +8,7 @@ contain only:
 
 No real journal or project profile ships in-tree. Anything that looks like a
 real (declared) venue/project profile, any exemplar PDF, or any committed
-``.neuroscribe/`` overlay is a leak. This runs in CI and locally.
+``.neuro-audit/`` overlay is a leak. This runs in CI and locally.
 
 Exit 0 = clean. Exit 1 = a boundary violation was found.
 """
@@ -21,7 +21,7 @@ REPO = Path(__file__).resolve().parent.parent
 
 # YAML profiles allowed in-tree: synthetic examples only (``*.example.yaml``).
 # No real journal or project profile ships — those live only in a user's
-# private ``.neuroscribe/`` overlay.
+# private ``.neuro-audit/`` overlay.
 
 # Markers that identify a file as a *real* (declared) venue/project profile
 # rather than a synthetic example or a schema.
@@ -53,7 +53,7 @@ def main() -> int:
             continue
 
         # 2) No committed runtime overlay or exemplars directory.
-        if rel.startswith(".neuroscribe/") or "/exemplars/" in rel:
+        if rel.startswith(".neuro-audit/") or "/exemplars/" in rel:
             violations.append(f"{rel}: private runtime overlay committed")
             continue
 
@@ -69,7 +69,7 @@ def main() -> int:
             if any(m in text for m in PROFILE_MARKERS):
                 violations.append(
                     f"{rel}: real journal/project profile committed (keep it in a "
-                    f"private .neuroscribe/ overlay)"
+                    f"private .neuro-audit/ overlay)"
                 )
 
     if violations:
