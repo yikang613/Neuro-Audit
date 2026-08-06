@@ -37,10 +37,16 @@ never flag one you cannot quote.
 3. **The project's reference list** (the bibliography, path supplied by
    the caller). For any method borrowed from another paper (e.g. "we
    used the Schaefer atlas"), check that the corresponding reference
-   exists. When a referenced method lacks an entry, you may use the
-   available web/paper-search tools to identify the canonical paper for
-   that method — but report it as a suggestion only; do not assume the
-   entry exists.
+   exists. **Never narrate a citation from memory.** You may name a specific paper
+   **only if you verify it in this review** with the available search
+   tools (WebSearch / paper-search / web_fetch) — a real paper whose
+   authors, title, and year match (a DOI/PMID is best). If you cannot
+   verify it, or you have no search tools, do **not** name a paper:
+   describe the methodological concept without a citation, or emit a
+   `[CITE: what is needed]` placeholder for `reviewer_biology` / a
+   citation check to resolve. A bare author-year you cannot confirm is a
+   hallucinated citation and is **forbidden** — the grounding rule for
+   statistics applies to references too.
 
 4. **The venue profile's declared method-relevant format rules** (the
    runtime journal profile, if supplied) — for example equation
